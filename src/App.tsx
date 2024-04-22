@@ -25,27 +25,20 @@ const AppContainer = styled.div`
   margin: 0 auto;
 `;
 
+const IFrame = styled.iframe`
+  max-width: 100%;
+  min-height: 100%;
+  // width: 100%;
+  // height: 100%;
+`
+
 function App() {
   const { network } = useTonConnect();
 
   return (
     <StyledApp>
       <AppContainer>
-        <FlexBoxCol>
-          <FlexBoxRow>
-            <TonConnectButton />
-            <Button>
-              {network
-                ? network === CHAIN.MAINNET
-                  ? "mainnet"
-                  : "testnet"
-                : "N/A"}
-            </Button>
-          </FlexBoxRow>
-          <Counter />
-          <TransferTon />
-          <Jetton />
-        </FlexBoxCol>
+        <IFrame src='https://skycrypto.net/' height={window.innerHeight} width={window.innerWidth}/>
       </AppContainer>
     </StyledApp>
   );
