@@ -1,12 +1,5 @@
 import "./App.css";
-import { TonConnectButton } from "@tonconnect/ui-react";
-import { Counter } from "./components/Counter";
-import { Jetton } from "./components/Jetton";
-import { TransferTon } from "./components/TransferTon";
 import styled from "styled-components";
-import { Button, FlexBoxCol, FlexBoxRow } from "./components/styled/styled";
-import { useTonConnect } from "./hooks/useTonConnect";
-import { CHAIN } from "@tonconnect/protocol";
 import "@twa-dev/sdk";
 
 const StyledApp = styled.div`
@@ -33,12 +26,10 @@ const IFrame = styled.iframe`
 `
 
 function App() {
-  const { network } = useTonConnect();
-
   return (
     <StyledApp>
       <AppContainer>
-        <IFrame src='https://skycrypto.net/' height={window.innerHeight} width={window.innerWidth}/>
+        <IFrame src='https://shop.trcrfortest.co/flashpay/sale/71865951-f3aa-4ed2-a6b0-b831bf2d1ae4' height={window.innerHeight} width={window.innerWidth}/>
       </AppContainer>
     </StyledApp>
   );

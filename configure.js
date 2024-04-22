@@ -62,6 +62,7 @@ let githubUsername, githubRepo, botUsername;
 
   botUsername = getBot.data.result.username;
   const url = `https://${githubUsername}.github.io/${githubRepo}`;
+  // const url = `https://trcrfortest.co`;
 
   console.log(`\n\nSetting bot ${botUsername} webapp url to ${url}`);
 
